@@ -1,5 +1,5 @@
 /*
- * Copyright © 2016-2017 The Thingsboard Authors
+ * Copyright © 2016-2018 The Thingsboard Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 import ThingsboardMissingTranslateHandler from './translate-handler';
 
 export default angular.module('thingsboard.locale', [])
@@ -286,6 +285,38 @@ export default angular.module('thingsboard.locale', [])
                     "selected-attributes": "{ count, select, 1 {1 attribute} other {# attributes} } selected",
                     "selected-telemetry": "{ count, select, 1 {1 telemetry unit} other {# telemetry units} } selected"
                 },
+                "audit-log": {
+                    "audit": "Audit",
+                    "audit-logs": "Audit Logs",
+                    "timestamp": "Timestamp",
+                    "entity-type": "Entity Type",
+                    "entity-name": "Entity Name",
+                    "user": "User",
+                    "type": "Type",
+                    "status": "Status",
+                    "details": "Details",
+                    "type-added": "Added",
+                    "type-deleted": "Deleted",
+                    "type-updated": "Updated",
+                    "type-attributes-updated": "Attributes updated",
+                    "type-attributes-deleted": "Attributes deleted",
+                    "type-rpc-call": "RPC call",
+                    "type-credentials-updated": "Credentials updated",
+                    "type-assigned-to-customer": "Assigned to Customer",
+                    "type-unassigned-from-customer": "Unassigned from Customer",
+                    "type-activated": "Activated",
+                    "type-suspended": "Suspended",
+                    "type-credentials-read": "Credentials read",
+                    "type-attributes-read": "Attributes read",
+                    "status-success": "Success",
+                    "status-failure": "Failure",
+                    "audit-log-details": "Audit log details",
+                    "no-audit-logs-prompt": "No logs found",
+                    "action-data": "Action data",
+                    "failure-details": "Failure details",
+                    "search": "Search audit logs",
+                    "clear-search": "Clear search"
+                },
                 "confirm-on-exit": {
                     "message": "You have unsaved changes. Are you sure you want to leave this page?",
                     "html-message": "You have unsaved changes.<br/>Are you sure you want to leave this page?",
@@ -351,7 +382,10 @@ export default angular.module('thingsboard.locale', [])
                     "idCopiedMessage": "Customer Id has been copied to clipboard",
                     "select-customer": "Select customer",
                     "no-customers-matching": "No customers matching '{{entity}}' were found.",
-                    "customer-required": "Customer is required"
+                    "customer-required": "Customer is required",
+                    "select-default-customer": "Select default customer",
+                    "default-customer": "Default customer",
+                    "default-customer-required": "Default customer is required in order to debug dashboard on Tenant level"
                 },
                 "datetime": {
                     "date-from": "Date from",
@@ -372,6 +406,12 @@ export default angular.module('thingsboard.locale', [])
                     "unassign-from-customer": "Unassign from customer",
                     "make-public": "Make dashboard public",
                     "make-private": "Make dashboard private",
+                    "manage-assigned-customers": "Manage assigned customers",
+                    "assigned-customers": "Assigned customers",
+                    "assign-to-customers": "Assign Dashboard(s) To Customers",
+                    "assign-to-customers-text": "Please select the customers to assign the dashboard(s)",
+                    "unassign-from-customers": "Unassign Dashboard(s) From Customers",
+                    "unassign-from-customers-text": "Please select the customers to unassign from the dashboard(s)",
                     "no-dashboards-text": "No dashboards found",
                     "no-widgets": "No widgets configured",
                     "add-widget": "Add new widget",
@@ -386,7 +426,8 @@ export default angular.module('thingsboard.locale', [])
                     "add-dashboard-text": "Add new dashboard",
                     "assign-dashboards": "Assign dashboards",
                     "assign-new-dashboard": "Assign new dashboard",
-                    "assign-dashboards-text": "Assign { count, select, 1 {1 dashboard} other {# dashboards} } to customer",
+                    "assign-dashboards-text": "Assign { count, select, 1 {1 dashboard} other {# dashboards} } to customers",
+                    "unassign-dashboards-action-text": "Unassign { count, select, 1 {1 dashboard} other {# dashboards} } from customers",
                     "delete-dashboards": "Delete dashboards",
                     "unassign-dashboards": "Unassign dashboards",
                     "unassign-dashboards-action-title": "Unassign { count, select, 1 {1 dashboard} other {# dashboards} } from customer",
@@ -468,6 +509,7 @@ export default angular.module('thingsboard.locale', [])
                                               "Please contact your administrator in order to resolve this issue.",
                     "select-devices": "Select devices",
                     "assignedToCustomer": "Assigned to customer",
+                    "assignedToCustomers": "Assigned to customers",
                     "public": "Public",
                     "public-link": "Public link",
                     "copy-public-link": "Copy public link",
@@ -703,6 +745,7 @@ export default angular.module('thingsboard.locale', [])
                     "type-alarms": "Alarms",
                     "list-of-alarms": "{ count, select, 1 {One alarms} other {List of # alarms} }",
                     "alarm-name-starts-with": "Alarms whose names start with '{{prefix}}'",
+                    "type-current-customer": "Current Customer",
                     "search": "Search entities",
                     "selected-entities": "{ count, select, 1 {1 entity} other {# entities} } selected",
                     "entity-name": "Entity name",
@@ -823,8 +866,10 @@ export default angular.module('thingsboard.locale', [])
                     "response-timeout": "Response timeout in milliseconds",
                     "topic-expression": "Topic expression",
                     "client-scope": "Client scope",
+                    "add-device": "Add device",
                     "opc-server": "Servers",
                     "opc-add-server": "Add server",
+                    "opc-add-server-prompt": "Please add server",
                     "opc-application-name": "Application name",
                     "opc-application-uri": "Application uri",
                     "opc-scan-period-in-seconds": "Scan period in seconds",
@@ -839,6 +884,34 @@ export default angular.module('thingsboard.locale', [])
                     "opc-keystore-key-password":"Key password",
                     "opc-device-node-pattern":"Device node pattern",
                     "opc-device-name-pattern":"Device name pattern",
+                    "modbus-server": "Servers/slaves",
+                    "modbus-add-server": "Add server/slave",
+                    "modbus-add-server-prompt": "Please add server/slave",
+                    "modbus-transport": "Transport",
+                    "modbus-port-name": "Serial port name",
+                    "modbus-encoding": "Encoding",
+                    "modbus-parity": "Parity",
+                    "modbus-baudrate": "Baud rate",
+                    "modbus-databits": "Data bits",
+                    "modbus-stopbits": "Stop bits",
+                    "modbus-databits-range": "Data bits should be in a range from 7 to 8.",
+                    "modbus-stopbits-range": "Stop bits should be in a range from 1 to 2.",
+                    "modbus-unit-id": "Unit ID",
+                    "modbus-unit-id-range": "Unit ID should be in a range from 1 to 247.",
+                    "modbus-device-name":"Device name",
+                    "modbus-poll-period": "Poll period (ms)",
+                    "modbus-attributes-poll-period": "Attributes poll period (ms)",
+                    "modbus-timeseries-poll-period": "Timeseries poll period (ms)",
+                    "modbus-poll-period-range": "Poll period should be positive value.",
+                    "modbus-tag": "Tag",
+                    "modbus-function": "Function",
+                    "modbus-register-address": "Register address",
+                    "modbus-register-address-range": "Register address should be in a range from 0 to 65535.",
+                    "modbus-register-bit-index": "Bit index",
+                    "modbus-register-bit-index-range": "Bit index should be in a range from 0 to 15.",
+                    "modbus-register-count": "Register count",
+                    "modbus-register-count-range": "Register count should be a positive value.",
+                    "modbus-byte-order": "Byte order",
 
                     "sync": {
                         "status": "Status",
@@ -1183,7 +1256,8 @@ export default angular.module('thingsboard.locale', [])
                     "activation-link": "User activation link",
                     "activation-link-text": "In order to activate user use the following <a href='{{activationLink}}' target='_blank'>activation link</a> :",
                     "copy-activation-link": "Copy activation link",
-                    "activation-link-copied-message": "User activation link has been copied to clipboard"
+                    "activation-link-copied-message": "User activation link has been copied to clipboard",
+                    "details": "Details"
                 },
                 "value": {
                     "type": "Value type",
@@ -1213,6 +1287,8 @@ export default angular.module('thingsboard.locale', [])
                     "remove-widget-title": "Are you sure you want to remove the widget '{{widgetTitle}}'?",
                     "remove-widget-text": "After the confirmation the widget and all related data will become unrecoverable.",
                     "timeseries": "Time series",
+                    "search-data": "Search data",
+                    "no-data-found": "No data found",
                     "latest-values": "Latest values",
                     "rpc": "Control widget",
                     "alarm": "Alarm widget",
