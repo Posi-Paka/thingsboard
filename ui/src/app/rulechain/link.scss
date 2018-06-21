@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.thingsboard.server.common.transport;
 
-import org.thingsboard.server.common.data.Device;
-import org.thingsboard.server.common.msg.aware.SessionAwareMsg;
-
-public interface SessionMsgProcessor {
-
-    void process(SessionAwareMsg msg);
-
-    void onDeviceAdded(Device device);
-
+.tb-link-label-autocomplete {
+  .tb-not-found {
+    display: block;
+    line-height: 1.5;
+    height: 48px;
+    .tb-no-entries {
+      line-height: 48px;
+    }
+  }
+  li {
+    height: auto !important;
+    white-space: normal !important;
+  }
 }
